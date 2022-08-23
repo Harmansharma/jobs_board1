@@ -1,6 +1,49 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @job %>
+<h1>Jobs</h1>
+
+
+<p>
+    <strong> ID: </strong>
+    <%= @job.id %>
+<p>
+
+  <p>
+    <strong>Job_Title:</strong>
+    <%= @job.job_title %>
+    <p>
+
+ <p>
+    <strong>Company: </strong>
+    <%= @job.company %>
+  <p>
+
+  <p>
+    <strong>URL:</strong>
+    <%=@job.url %>
+
+  </p>
+
+  <p>
+    <strong> Requirment: </strong>
+     <%=@job.requirment %>
+
+  </p>
+
+  <p>
+    <strong> Summmary: </strong>
+    <%=@job.summmary %>
+
+  </p> 
+
+  <p>
+    <strong>Responsibility</strong>
+    <%=@job.responsibily %>
+  </p>    
+
+
+
+
 
 <div>
   <%= link_to "Edit this job", edit_job_path(@job) %> |

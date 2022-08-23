@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  village_name: MyString
+  village_block: MyString
+  pin_code: MyString
+  post_office: MyString
+  district: MyString
+
+two:
+  village_name: MyString
+  village_block: MyString
+  pin_code: MyString
+  post_office: MyString
+  district: MyString

@@ -11,10 +11,10 @@
    <th>Requirment</th>
    <th>Summary</th>
    <th>Responsibily</th>
+   <th> link</th>
 
  </tr>
  <% @jobs.each do |job| %>
-
 
  <tr>
    <td> <%=job.id %> </td>
@@ -24,17 +24,10 @@
    <td>  <%= job.requirment %> </td>
    <td>    <%= job.summmary %> </td>
    <td> <%= job.responsibily %>  </td>
+   <td> <%= link_to "show", job_path(job.id) %></td>
  </tr>
-
-
-
-
-
+ <% end %>
 </table>
-<p>
-      <%= link_to "Show this job"%>
-    </p>
-  <% end %>
-</div>
+
 
 <%= link_to "New job", new_job_path %>

@@ -1,0 +1,41 @@
+
+<h1>Courses</h1>
+
+<table>
+  
+<tr>
+  <th> ID </th>
+  <th> Course_name </th>
+   <th> Course_type </th>
+   <th> Price </th>
+   <th> Author_name </th>
+   <th> Summary  </th>
+   <th> link  </th>
+
+</tr>
+     <% @courses.each do |course| %>
+<tr>
+
+    <td> <%= course.id %> </td>
+    <td> <%= course.course_name %></td>
+    <td> <%= course.course_type %></td>
+    <td> <%= course.price %>   </td>
+    <td>  <%= course.author_name %></td>
+    <td>  <%= course.summary %></td>
+    <td>  <%= link_to "show", course_path(course.id) %>
+
+ 
+
+
+
+</tr>
+<% end %>
+
+
+
+
+</table>
+
+
+
+<%= link_to "New course", new_course_path %>

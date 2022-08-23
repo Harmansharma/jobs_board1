@@ -1,0 +1,36 @@
+<h1>Village_detail</h1>
+
+
+
+<table>
+	 
+	 <tr>
+	 	<th> ID </th>
+	 	<th> Villlage_Name </th>
+	 	<th> Villages_BLock </th>
+	 	<th> Pin_Code   </th>
+	 	<th> Post_Office </th>
+	 	<th> District </th>
+	 	<th> link</th>
+
+	 </tr>
+
+ <% @villages.each do|village| %>
+    
+    <tr>
+    	<td><%=village.id%></td>
+    	<th><%=village.village_name%></th>
+    	<th><%=village.village_block%></th>
+    	<th><%=village.pin_code%></th>
+    	<th><%=village.post_office %></th>
+    	<th><%=village.district%></th>
+        <th><%=link_to "show", village_path(village.id)%></th>
+    </tr>
+
+    <% end %>
+
+
+
+
+
+</table>

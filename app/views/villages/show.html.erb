@@ -1,0 +1,47 @@
+
+<h1>Village_Detail</h1>
+
+
+<p>
+    <strong> ID: </strong>
+    <%= @village.id %>
+<p>
+
+  <p>
+    <strong>Village_Block:</strong>
+    <%= @village.village_name %>
+    <p>
+
+ <p>
+    <strong>Village_BLock: </strong>
+    <%= @village.village_block %>
+  <p>
+
+  <p>
+    <strong>Pin_Code:</strong>
+    <%=@village.pin_code %>
+
+  </p>
+
+  <p>
+    <strong> Post_Office: </strong>
+     <%=@village.post_office %>
+
+  </p>
+
+  <p>
+    <strong> District: </strong>
+    <%=@village.district %>
+
+  </p> 
+
+
+
+
+
+<div>
+  <%= link_to "Edit this village", edit_village_path(@village) %> |
+  <%= link_to "Back to villages", villages_path %>
+
+  <%= button_to "Destroy this village", @village, method: :delete %>
+</div>

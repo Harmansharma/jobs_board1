@@ -1,0 +1,39 @@
+<%= form_with(model: @village) do |form| %> 
+
+
+
+
+ <div>
+    <%= form.label :Village_Name , style: "display: block" %>
+    <%= form.text_field :village_name  %>
+  </div>	
+
+  <div>
+  	<%= form.label :Village_Block, style: "display: block" %>
+     <%= form.text_field :village_block %>
+  </div>
+
+  <div>
+  	<%= form.label :Pin_Code, style: "display: block" %>
+  	<%= form.text_field :pin_code %>
+
+  </div>
+
+  <div>
+  	<%=form.label :Post_Office, style: "display: block"%>
+  	<%=form.text_field :post_office %>
+
+  </div>
+
+  <div>
+  	
+  	<%=form.label :District, style: "display: block"%>
+  	<%=form.text_field :district %>
+  </div>
+
+
+  <div>
+       <%=form.submit %>
+  </div>
+
+  <%end %>
