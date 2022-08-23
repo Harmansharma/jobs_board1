@@ -1,12 +1,38 @@
-<p style="color: green"><%= notice %></p>
+
 
 <h1>Jobs</h1>
+ 
+ <table>
+ <tr>
+   <th>Id </th>
+   <th>Job_Title </th>
+   <th>Company</th>
+   <th>Url</th>
+   <th>Requirment</th>
+   <th>Summary</th>
+   <th>Responsibily</th>
 
-<div id="jobs">
-  <% @jobs.each do |job| %>
-    <%= render job %>
-    <p>
-      <%= link_to "Show this job", job %>
+ </tr>
+ <% @jobs.each do |job| %>
+
+
+ <tr>
+   <td> <%=job.id %> </td>
+   <td><%= job.job_title %></td>
+   <td> <%= job.company %>   </td>
+   <td>   <%= job.url %></td>
+   <td>  <%= job.requirment %> </td>
+   <td>    <%= job.summmary %> </td>
+   <td> <%= job.responsibily %>  </td>
+ </tr>
+
+
+
+
+
+</table>
+<p>
+      <%= link_to "Show this job"%>
     </p>
   <% end %>
 </div>
