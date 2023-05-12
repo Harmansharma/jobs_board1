@@ -1,6 +1,6 @@
 class EmployersController < ApplicationController
   before_action :set_employer, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, :only => [:new, :edit,:destroy]
   # GET /employers or /employers.json
   def index
     @employers = Employer.all
@@ -16,7 +16,7 @@ class EmployersController < ApplicationController
   end
 
   # GET /employers/1/edit
-  def edit
+  def edit    
   end
 
   # POST /employers or /employers.json
