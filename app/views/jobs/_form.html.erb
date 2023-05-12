@@ -1,30 +1,42 @@
+  
 <%= form_with(model: job) do |form| %>
  
+  <div class="card">
+
+  <div class="card-body">
+
+  <div class="mb-3">
   
-
-  <div>
-    <%= form.label :job_title, style: "display: block" %>
-    <%= form.text_field :job_title %>
+    <%= form.label :job_title, class: "form-label" %>
+    <%= form.text_field :job_title, class: "form-control",  placeholder: "job_title"  %>
   </div>
 
-  <div>
-    <%= form.label :company, style: "display: block" %>
-    <%= form.text_field :company %>
+  <div class="mb-3">
+    <%= form.label :company, class: "form-label" %>
+    <%= form.text_field :company ,class: "form-control", placeholder: "company" %>
   </div>
 
-  <div>
-    <%= form.label :url, style: "display: block" %>
-    <%= form.text_field :url %>
+  <div class="mb-3">
+
+    
+     
+    <%= form.label :image, class: "form-label" %>
+    <%= form.file_field :image  ,class: "form-control", placeholder: "image " %>
   </div>
 
-  <div>
-    <%= form.label :requirment, style: "display: block" %>
-    <%= form.text_field :requirment %>
+  <div class="mb-3">
+    <%= form.label :url, class: "form-label" %>
+    <%= form.text_field :url , class: "form-control", placeholder: "url" %>
   </div>
 
-  <div>
-    <%= form.label :summmary, style: "display: block" %>
-    <%= form.text_area :summmary %>
+  <div class="mb-3">
+    <%= form.label :requirment, class: "form-label" %>
+    <%= form.text_field :requirment ,class: "form-control", placeholder: "requirment" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :summary, class: "form-label" %>
+    <%= form.text_area :summary %>
   </div>
 
   <div>
@@ -35,4 +47,6 @@
   <div>
     <%= form.submit %>
   </div>
+</div>
+</div></div>
 <% end %>

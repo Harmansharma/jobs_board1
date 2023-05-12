@@ -1,28 +1,26 @@
 # frozen_string_literal: true
 
-class users::SessionsController < Devise::SessionsController
+class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
-
+  
   # GET /resource/sign_in
    def new
     
      super 
 
-     @user = User.new
+    
    end
 
   # POST /resource/sign_in
    def create
-    @user = User.new( user_params )
-    super do |resource|
-      BackgroundWorker.trigger(resource)
-    end
+    super
+    
    end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+     super
+   end
 
   # protected
 

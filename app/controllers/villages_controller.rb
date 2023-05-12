@@ -21,7 +21,7 @@ def new
       
       render :new, unprocessable_entity
 
-end
+    end
 end 
 
 def show
